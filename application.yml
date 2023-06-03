@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+info:
+  author: Lucas Ferreira Nogueira
+  mail: lucas.ferreiranogueira@gmail.com
+  cel: (11) 95953-8062
+server:
+  port: ${PORT:9999}
+message: Realizando a avaliação de especialização em Backend Java
