@@ -10,6 +10,9 @@ management:
     web:
       exposure:
         include: health,info
+  endpoint:
+    health:
+      show-details: always
 info:
   author: Lucas Ferreira Nogueira
   mail: lucas.ferreiranogueira@gmail.com
