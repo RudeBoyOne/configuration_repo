@@ -5,7 +5,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: CataloRoute
+        - id: CatalogoRoute
           uri: lb://catalogo-service
           predicates:
             - Path=/catalogo/**
