@@ -28,7 +28,3 @@ info:
   author: Lucas Ferreira Nogueira
   mail: lucas.ferreiranogueira@gmail.com
 message: Realizando a avaliação de especialização em Backend Java
-
-queue:
-  serie-service: queue-serie-service
-  movie-service: queue-movie-service
