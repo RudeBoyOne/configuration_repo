@@ -1,15 +1,18 @@
 server:
   port: ${PORT:8080}
-  
 spring:
   cloud:
     gateway:
       routes:
-        - id: CatalogRoute
+        - id: catalogRoute
           uri: lb://CATALOG-SERVICE
           predicates:
-            - Path=/catalog/**
-        - id: MovieRoute
+            - Path=/catalog-api/**
+        - id: movieRoute
           uri: lb://MOVIE-SERVICE
           predicates:
-            - Path=/movie/**
+            - Path=/movie-api/**
+        - id: serieRoute
+          uri: lb://SERIE-SERVICE
+          predicates:
+            - Path=/serie-api/**
