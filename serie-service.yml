@@ -4,3 +4,6 @@ server:
     context-path: /serie-api
 queue:
   serie-service: queue-serie-service
+spring:
+  zipkin:
+    base-url: http://zipkin-service:9411
