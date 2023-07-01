@@ -7,3 +7,14 @@ queue:
 spring:
   zipkin:
     base-url: http://zipkin-service:9411
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
