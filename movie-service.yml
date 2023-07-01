@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /movie-api
 queue:
-  movie-service: queue-serie-service
+  movie-service: queue-movie-service
 spring:
   zipkin:
     base-url: http://${ZIPKIN_URL:localhost}:9411
