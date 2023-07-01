@@ -1,5 +1,5 @@
 spring:
-    zipkin:
+  zipkin:
     base-url: http://${ZIPKIN_URL:localhost}:9411
   rabbitmq:
     username: guest
