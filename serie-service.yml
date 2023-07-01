@@ -6,7 +6,7 @@ queue:
   serie-service: queue-serie-service
 spring:
   zipkin:
-    base-url: http://zipkin-service:9411
+    base-url: http://${ZIPKIN_URL:localhost}:9411
 management:
   info:
     env:
