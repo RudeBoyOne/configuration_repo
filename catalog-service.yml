@@ -30,8 +30,8 @@ resilience4j:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: COUNT_BASED
-        slidingWindowSize: 3
-        failueRateThreshold: 20
+        slidingWindowSize: 2
+        failueRateThreshold: 10
         waitDurationInOpenState: 10000
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
@@ -39,8 +39,8 @@ resilience4j:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: COUNT_BASED
-        slidingWindowSize: 3
-        failueRateThreshold: 20
+        slidingWindowSize: 2
+        failueRateThreshold: 10
         waitDurationInOpenState: 10000
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
