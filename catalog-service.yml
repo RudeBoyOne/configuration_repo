@@ -23,3 +23,44 @@ management:
   endpoint:
     health:
       show-details: always
+resilience4j:
+  circuitbreaker:
+    instances:
+      movie-service:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 3
+        failueRateThreshold: 20
+        waitDurationInOpenState: 10000
+        permittedNumberOfCalssInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfIfOpenEnabled: true
+      serie-service:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 3
+        failueRateThreshold: 20
+        waitDurationInOpenState: 10000
+        permittedNumberOfCalssInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfIfOpenEnabled: true
+retry:
+    instances:
+      serie-service:
+        maxAttempts: 2
+        waitDuration: 5000
+        retryExceptions:
+          - feign.FeignException$ServiceUnavailable
+          - feign.FeignException$InternalServerError
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+      movie-service:
+        maxAttempts: 2
+        waitDuration: 5000
+        retryExceptions:
+          - feign.FeignException$ServiceUnavailable
+          - feign.FeignException$InternalServerError
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
