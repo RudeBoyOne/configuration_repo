@@ -4,6 +4,7 @@ server:
     context-path: /catalog-api
 queue:
   movie-service: queue-movie-service
+  serie-service: queue-serie-service
 spring:
   zipkin:
     base-url: http://${ZIPKIN_URL:localhost}:9411
