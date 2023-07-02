@@ -5,11 +5,11 @@ spring:
     gateway:
       routes:
         - id: catalogRoute
-          uri: lb://CATALOG-SERVICE
+          uri: lb://catalog-service
           predicates:
             - Path=/catalog-api/**
         - id: movieRoute
-          uri: lb://MOVIE-SERVICE
+          uri: lb://movie-service
           predicates:
             - Path=/movie-api/**
         - id: serieRoute
